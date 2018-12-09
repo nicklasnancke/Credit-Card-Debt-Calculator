@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string strBalance;
+            double dblBalance;
+            string strMonthlyPayment;
+            double dblMonthlyPayment;
+            double dblInterest = 19.9;
+            string strMonths;
+            double dblMonths;
+            string strYears;
+            double dblYears;
+            string strMinimum;
+            double dblMinimum;
+
+            Console.WriteLine("What is your current outstanding balance? ");
+            strBalance = Console.ReadLine();
+            dblBalance = double.Parse(strBalance);
+
+            Console.WriteLine("What is your projected minimum monthly payment?");
+            strMonthlyPayment = Console.ReadLine();
+            dblMonthlyPayment = double.Parse(strMonthlyPayment);
+
+            Console.WriteLine("In how many years would you like to be debt free? ");
+            strYears = Console.ReadLine();
+            dblYears = double.Parse(strYears);
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            dblMinimum = dblBalance * (dblInterest / 12) * 0.02;
+
+            // dblMonthlyPayment = (((19.9/12)dblBalance)/(1-(1+(19.9 / 12))dblMonths));
+
+            do
+            {
+                Console.WriteLine("Your monthly payment has to be more than 2.00% of the oustanding balance which will be " + dblMinimum);
+                Console.WriteLine("You will have your credit card paid off in " + dblMonths + " if you pay " + dblMonthlyPayment + " a month." );
+            }
+            while (dblMonthlyPayment <= dblMinimum);
+            {
+                Console.WriteLine("");  
+            }           
+        }
+    }
+}
