@@ -1,4 +1,4 @@
-# Credit-Card-Debt-Calculator
+# C# Credit-Card-Debt-Calculator
 
 Write them a program that would calculate how long it would take to pay off the card. The program should 
 let the user input the amount owed and the amount they are going to pay each month, and then calculate how many 
